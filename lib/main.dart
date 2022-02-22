@@ -95,7 +95,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 const Text("Don't have an account?"),
                 TextButton(
                   child: const Text(
-                    'Sign up here',
+                    'Sign up here..',
                     style: TextStyle(color: Colors.black,decoration:TextDecoration.underline,decorationColor: Colors.black
                     ),
                   ),
