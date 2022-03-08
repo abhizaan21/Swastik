@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_flutter/signup_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -84,10 +85,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: ElevatedButton(
                   child: const Text('Login'),
                   onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
+                   // print(nameController.text);
+                  //  print(passwordController.text);
                   },
-                  style: ElevatedButton.styleFrom(primary: Colors.orangeAccent,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)) ),
+                  style: ElevatedButton.styleFrom(primary: Colors.orange,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)) ),
                 )
             ),
             Row(
@@ -100,6 +101,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     ),
                   ),
                   onPressed: () {
+                    Navigator.push(
+                      context,MaterialPageRoute(builder:(context)=> SignupPage()),
+                    );
                     //signup screen
                   },
                 )
