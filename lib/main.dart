@@ -39,7 +39,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           children: <Widget>[
             Container(
                 alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(25),
 
                 child: Image.asset('assets/images/Swastik.jpg')
             ),
@@ -47,8 +47,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Sign in',
-                  style: TextStyle(fontSize: 20),
+                    "Upgrade your LifeStyle",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    fontFamily:"Hurricane",
+                  ),
                 )),
             Container(
               padding: const EdgeInsets.all(10),

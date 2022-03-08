@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    const String _title="Sign Up";
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
+      appBar: AppBar(title: const Text(_title),
+        backgroundColor: Colors.orange,
         leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
@@ -32,10 +33,11 @@ class SignupPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         const Text(
-                          "Sign up",
+                          "Upgrade your LifeStyle",
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
+                            fontFamily:"Hurricane",
                           ),
                         ),
                         const SizedBox(
