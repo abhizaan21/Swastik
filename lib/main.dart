@@ -1,7 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:test_flutter/signup_screen.dart';
+import 'package:swastik_app/page/signup_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+await Firebase.initializeApp();
+FirebaseAuth.instance;
+runApp(const MyApp());}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -14,20 +20,20 @@ class MyApp extends StatelessWidget {
       title: _title,
       home: Scaffold(
         appBar: AppBar(title: const Text(_title),backgroundColor: Colors.orange,),
-        body: const MyStatefulWidget(),
+        body: const LoginScreen(),
       ),
     );
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _LoginScreenState extends State<LoginScreen> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -60,7 +66,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 controller: nameController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'User Name',
+                  labelText: 'User Email',
+                  // prefixIcon:
                 ),
               ),
             ),
